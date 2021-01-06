@@ -1,0 +1,283 @@
+﻿ @charset "utf-8";
+   /* CSS Document */
+* { margin: 0px; padding: 0px;}
+body{ font-size:14px; line-height:2; }
+ol,ul { list-style:none; }
+a { color:#333;text-decoration:none; }
+a:hover{ color:#345ca2; }
+img { border:0;  vertical-align:middle;}
+table { border-collapse:collapse; border-spacing:0; }
+.clear { clear:both; font-size:0; height:0; line-height:0; overflow:hidden;}
+.Mar{ width:984px; }
+
+/********topbg********/
+.topbg{ width:984px; height:108px; background-color:#4581b0;margin:0 auto; }
+.top{ width:100%; height:85px; background-color:#4581b0; margin:0 auto; position:relative; }
+
+/*xp 20150306 begin*/
+.logo{ width:100%; height:50px; margin:0 auto;  position:absolute; top:42px; left:0; color: #fff; font-family: "Microsoft Yahei"; font-size: 18px; text-align: center;}
+/*xp 20150306 end*/
+/********topbg end********/
+
+/*******wrapper*********/
+.wrapper{ width:100%; }
+/*******wrapper end*********/
+
+/*******wrapper_topbg*********/
+/*xp 20150305 begin*/
+.wrapper_topbg{ width:984px;  margin:0 auto; padding-top:0px;}
+/*xp 20150305 end*/
+
+
+/*******wrapper_con*********/
+.wrapper_con{ /*width:1020px;*/  margin:0 auto;}
+.wrapper_conT{width:100%;height:10px; font-size:0}
+/*******wrapper_con end*********/
+/*******wrapper_con_content*********/
+.wrapper_con_content{ width:984px;  padding-top:17px; }
+.TextInfo{ height:307px; /*position:relative;*/ }
+.navbar{height:27px; float:right;}
+.fastBar{ float:right;/*top:4px; right:0px;*/ display:block;  height:27px;}
+.fastBar li{ float:left; margin-left:10px;_margin-left:5px;}
+.fastBar li a.go2print{ display:block; width:89px; height:27px; padding-right:2px; text-align:right; line-height:25px;   color:#fff; font-weight:bold; letter-spacing:0.1em;}
+.fastBar li a.go2check{ display:block; width:89px; height:27px; padding-right:2px; text-align:right; line-height:25px;   color:#fff; font-weight:bold; letter-spacing:0.1em;}
+.fastBar li a.gohome{ display:block; width:89px; height:27px; padding-right:2px; text-align:right; line-height:25px;   color:#fff; font-weight:bold; letter-spacing:0.1em;}
+
+.TextInfoCon{ width:100%; height:271px;background:#f7f7f7;  position:relative;border: 1px solid #e1e1e1; }
+.TextTitle{ width:129px; height:33px; line-height:33px; color:#2f86cf; font-family:"Microsoft Yahei"; font-size:16px; font-weight:bold;  position:absolute; left:15px; top:-15px; padding-left:22px;border: 1px solid #e1e1e1;background-color: #fff;}
+/*TextInfoContent*/
+.TextInfoContent{ width:934px; height:214px; padding:36px 25px 15px 25px;}
+.TextInfoContent_left{ width:360px; float:left;}
+.TextInfoContent_left li{ font-size:14px; width:360px; WORD-WRAP: break-word;TABLE-LAYOUT: fixed;word-break:break-all; line-height:30px;}
+.TextInfoContent_left li .lbt{ color:#1779cc; font-weight:bold;}
+.TextInfoContent_left li .lbd{  float:left; width:258px; color:#333;}
+.division_line{ width:15px; height:215px; float:left; border-left: 1px solid #ddd;}
+.TextInfoContent_right{ width:480px; float:left; margin-left:20px;}
+.TextInfoContent_right li.title{ width:100%;color:#1779cc; font-weight:bold;}
+.TextInfoContent_right li{ float:left; display:block;width:160px;overflow:hidden; text-overflow:ellipsis; -o-text-overflow:ellipsis; white-space:nowrap;}
+.seal{ width:125px; height:125px; position:absolute; bottom:20px; right:10px;}
+/*ReportResult*/
+.ReportResult{ margin-top:13px; position:relative;border: 1px solid #e1e1e1;}
+.ReportResult .TextTitle{ top:-10px;}
+.ReportResult_T,.ReportResult_Con,.ReportResult_Bot{ width:984px; }
+.ReportResult_T{ background-position:0px 0px;}
+.ReportResult_Con{ width:944px; padding:28px 20px 10px 20px;}
+/*ReportResult_Con1*/
+.ReportResult_Con1{ width:100%;height:248px;}
+.ReportResult_Con1 dl{ height:75px;}
+.ReportResult_Con1 dl dt{ width:100%;  font-family:"Microsoft Yahei"; font-size:20px; color:#ef001c; height:35px; line-height:35px; margin-bottom:20px;}
+.ReportResult_Con1 dl dt .result{ font-weight:bold;  background-position:0 -847px; padding-left:25px;height:35px; line-height:35px;}
+.ReportResult_Con1 dl dd{ display:block;float:left; font-size:14px;  width:202px; padding-left:26px; margin-right:38px; margin-left:25px; height:24px; line-height:24px; }
+.ReportResult_Con1 dl dd .result_green{ color:#67a500; font-weight:bold;}
+.ReportResult_Con1 dl dd.qu1{ background-position:-300px -300px;}
+.ReportResult_Con1 dl dd.qu2{ background-position:-300px -350px; width:250px;}
+.ReportResult_Con1 dl dd.qu3{ background-position:-300px -400px;}
+/*detail*/
+.ReportResult_Con1 .detail{width:871px; padding:14px 23px 12px 23px; height:124px;background-color: #f7f7f7;border: 1px solid #e9e9e9; margin-top:17px; margin-left:23px;}
+.ReportResult_Con1 .detail .detail_L{ padding-top:16px;}
+.ReportResult_Con1 .detail .detail_L li{ float:left; font-size:12px; display:block; width:230px; padding-left:13px; height:30px; line-height:30px;} 
+.ReportResult_Con1 .detail .detail_L li .text_blue{ color:#1779cc;}
+.ReportResult_Con1 .detail .detail_R{ width:320px; height:132px; float:right;}
+/*ReportResult_Con2*/
+.ReportResult_Con2{ height:60px; font-size:14px; margin-top:9px;}
+.ReportResult_Con2 dl{}
+.ReportResult_Con2 dl dt{width:100%;  font-size:14px; color:#167ac8; height:35px; line-height:35px; margin-bottom:5px;}
+.ReportResult_Con2 dl dt .norm1{ color:#167ac8; font-weight:bold; background-position:-200px 7px; padding-left:25px;height:35px; line-height:35px; display:inline-block;}
+.ReportResult_Con2 dl dd{;display:block; float:left; width:65px; padding-left:21px;  background-position:-400px -592px; margin-left:23px; margin-right:24px;}
+.ReportResult_Con2 dl dd.on{background-position:-400px -642px; }
+.ReportResult_Bot{ background-position:-1970px 0px; }
+
+/*add20150311*/
+.ReportResultHiehgt{ height:174px;}
+.reportResHeight{ height:117px;}
+.ReportResult_Con2 dl dt .norm0{ color:#ef001c; font-size:20px;}
+.ReportResult_Con3{ height:auto; margin:0;}
+
+/*DetailReport*/
+.DetailReport{ width:984px;margin-top: 20px;}
+/* tab css */
+.notice { width: 984px;  overflow: hidden; }
+.notice .tab-hd { height: 30px;   color: #404040; position:relative; border-bottom: 1px solid #e1e1e1; }
+.notice .tab-hd .more{ position:absolute; right:0px; top:3px;}
+.notice .tab-hd ul {   }
+.notice .tab-hd li{ float: left; height: 30px; line-height: 30px;  width:105px; text-align:center; margin-right:12px;font-family:"Microsoft Yahei"; font-size:16px;   color:#1779cc;cursor:pointer;border: 1px solid #e1e1e1;border-bottom: none;}
+
+.notice .tab-hd li.on{  border-bottom: none; font-weight: bold; position: relative; color:#fff; cursor:pointer;  }
+.notice .tab-bd { padding:0px;  }
+.notice .tab-bd ul{ overflow:hidden; zoom:1; padding-top:20px; }
+.notice .tab-bd ul .summary{ width:100%;}
+.notice .tab-bd ul .summary dl dt{  display:block; height:35px; line-height:35px; }
+.notice .tab-bd ul .summary dl dt .sumInfo{ float:left; font-weight:bold;padding-left:15px;
+}
+.notice .tab-bd ul .summary dl dt .sumTotal{ float:right; font-size:12px; color:#2f86cf; font-weight:bold;}
+.notice .tab-bd ul .summary dl dd{ font-size:12px; color:#6e6e6e; font-weight:bold; display:block; width:966px; padding-left:18px; height:35px; line-height:35px;}
+/*detail_table*/
+.detail_table{ width:981px; border:1px #cccccc solid; margin-top:15px;}
+.detail_tableText{/* margin-top:5px;*/}
+.detail_tableText tr{ width:100%; border-bottom:1px #ccc solid;}
+.detail_tableText th{ height:30px; line-height:30px; }
+.detail_tableText th.original{ width:341px; text-align:center;}
+.detail_tableText th.xiangsi{ width:635px; text-align:center;margin-left:1px;}
+.detail_tableText th.fenge{ width:3px;}
+.detail_tableText td.fenge{ width:3px;}
+.detail_tableText tr td.Origin_text{ padding-top:10px; padding-left:5px; vertical-align:top;}
+.detail_tableText tr td.Origin_text span.listNu{ display:block; width:17px; height:17px; text-align:center; line-height:17px; color:#333;  float:left; margin-top:5px;}
+.detail_tableText tr td.Origin_text p{ display:block; width:290px; float:left; margin-left:10px;}
+.detail_tableText tr td {WORD-WRAP: break-word;TABLE-LAYOUT: fixed;word-break:break-all;}
+span.red{ color:#ff0000;}
+.siminfo{ margin-top:15px;}
+.siminfo em{  color:#ff0000; font-style: normal;}
+.detail_tableText tr td.Si_text{ padding:0px 10px 10px 10px; vertical-align:top;}
+.detail_tableText tr td.Si_text span.Si_title{ color:#1b6eb3; font-weight:bold;}
+.detail_tableText tr td.Si_text ul{ width:623px; background:#eff6fc; padding-top:10px; margin-top:5px;padding-bottom:10px;margin-bottom:20px;}
+.detail_tableText tr td.Si_text ul li{ clear:both; width:600px; line-height:25px; }
+.detail_tableText tr td.Si_text ul li .text_title{ font-weight:bold;}
+.notice .tab-bd li { height: 22px; line-height: 22px; padding: 0 10px 0 5px; overflow: hidden; width: 125px; float: left; }
+/******wrapper_con_content end**********/
+
+.DetailReport{/* height:500px;*/}
+/******wrapper_con_Bottom**********/
+.wrapper_con_Bottom{ width:1020px; height:10px; }
+/******wrapper_con_Bottom end**********/
+/******copyright**********/
+.copyright{ width:1020px; height:40px; margin:0 auto; line-height:40px; color:#333; text-align:center; font-size:12px;}
+
+
+#SealArea{ width:125px; height:125px; position:relative;}
+#SealBg {
+ width: 125px;
+ height: 125px;
+ position: absolute;
+ top:0;
+ left:0;
+}
+#SealPercent {
+ font-family: "Arial", sans-serif;
+ position: absolute;
+ text-align:center;
+ font-weight: 900;
+ font-size:25px;
+ top:36px;
+ left:26px;
+ color: #C10015;
+ display: block;
+ width: 100px;
+ height: 100px;
+}
+.uptop {
+	width:49px;
+	height:55px;
+	position:fixed;
+	display:block;
+	bottom:60px;
+	left:50%;
+	margin-left:535px;
+	_position:absolute;
+	_bottom:auto;
+	_margin-top:-230px
+}
+.uptop a {
+	display:block;
+	height:55px
+}
+
+/*xp 20150305 begin*/
+/*简洁页面*/
+.simply_table{width: 981px;border: 1px #cccccc solid;margin-top: 15px; border-top:2px #000 solid; border-bottom:2px #ccc solid; }
+.simply_table tr{height:65px;border-bottom: 1px solid #dbdbdb;}
+.simply_table tr.message_line{ width:981px;height:1px;border: none; }
+.simply_table td.org_number{ width:35px; vertical-align:top; padding-top:13px;}
+.org_number span.listNu{display: block;width: 17px;height: 17px;text-align: center;line-height: 17px;color: #333;
+float: left; margin-left:9px;}
+.simply_table td.org_content{ width:795px; vertical-align:top;padding-top:10px;}
+.simply_table td.org_content ul{ width:740px; padding:0px; margin:0px;}
+.simply_table td.org_content ul li{ width:740px; overflow:hidden; text-overflow:ellipsis; -o-text-overflow:ellipsis; white-space:nowrap; }
+.simply_table td.org_content ul li a{ color:#333; text-decoration:underline;}
+.simply_table td.org_content ul li a:hover{ color:#167ac8;}
+.simply_table td.org_content ul li.decoration{ color:#999999; font-size:14px;}
+.simply_table td.org_line{ width:1px; }
+.simply_table td.quote{ width:150px;}
+.simply_table td.quote ul.quote_num{padding:0px; margin:0px;}
+.simply_table td.quote ul.quote_num li{ height:32px; line-height:32px;text-align:center; width:146px; padding:0 2px;}
+.simply_table td.quote ul.quote_num li.shuzi{  color:#ff0000;}
+.simply_table td.quote ul.quote_num li.if_f{ color:#999999;}
+.simply_table td.quote ul.quote_num li.fenge_line{ width:100%; height:1px;}
+
+/*print*/
+.print{ width:981px; height:40px; margin-top:20px; border-top:1px #ccc solid; text-align:right;}
+.print ul li{ float:right;}
+.print ul li.print1{  padding-left:17px;margin-left:20px;}
+.print ul li.save{ padding-left:20px; }
+.print ul li a{ color:#333; font-size:12px;}
+
+/*去除页面*/
+.yuanwen_title{ width:969px; height:26px; background:#59a0d8; color:#fff; font-size:12px; font-weight:bold; line-height:26px; padding-left:14px;}
+.yuanwen{ margin-top:15px; }
+.yuanwen p{ text-indent:25px; font-family:Arial, Helvetica, sans-serif,"宋体";}
+/*颜色标记文本*/
+.notice .tab-hd li.nobg{  width:500px; float:right; font-size:14px; text-align:right; color:#888; cursor:inherit;border: none; }
+.notice .tab-hd li.nobg span.red11{ display:inline-block;color:#ff0000; }
+
+
+/*统一报告页add20150311*/
+.rpTitle{ height:33px;color:#2f86cf; font: bold 16px "Microsoft Yahei";  letter-spacing:0.2em;  padding-left:22px; position:relative;}
+.rpLine{ border-bottom:1px solid #e1e1e1;}
+.rpTitle .rptBox1{  line-height:33px;  display:inline-block; padding-left:10px; position:absolute; bottom:-1px; left:15px;}
+.rpTitle .rptBox1 .rptBox2{  padding-right:14px;}
+.rpTitle .rptBox1 span{ display:inline-block; height:33px; line-height:33px;  padding-left:12px; }
+.rpTitle .rptBox3{ color:#9c8e56;  height:20px; line-height:20px; padding-left:20px; font-size:12px; font-weight:normal; letter-spacing:0; margin-left:154px; padding-top:8px;}
+.rpTitle .rptBox4{ margin-left:220px;}
+
+.rptDownload{ width:123px; height:33px;  position:absolute; right:0; bottom:10px; font:16px "Microsoft Yahei";}
+.rptDownload a{ display:block; width:87px; height:100%; color:#fff; line-height:33px; letter-spacing:0.2em; padding-left:36px;}
+
+.reportDownload{ margin:18px auto;}
+.reportDownload table{ margin-top:12px; font-family:"Microsoft YaHei"; color:#333; border-color:#e1e1e1; background:none;}
+.reportDownload table th{ text-align:center; background:#5daee1; color:#fff; font:15px "Microsoft YaHei"; height:34px;}
+.reportDownload table td{ background:#fff; font-size:14px; height:38px; text-align:center; border-color:#e1e1e1;}
+.reportDownload table td.nameBg{ background:#f8f8f8; padding-left:40px; text-align:left;}
+.reportDownload table td .preview{ width:77px; height:25px;   cursor:pointer; color:#5b5b5b; border:none;}
+.reportDownload table td.nameBg span{ color:#1779cc;}
+
+.reportRecommend{ margin-bottom:18px;}
+.reportRecommend .rptRecommendList{ width:982px; height:224px; background:#fefefe; border:1px solid #e1e1e1;}
+.reportRecommend .rptRecommendList ul{ width:956px; margin:6px auto 0 auto; overflow:hidden;}
+.reportRecommend .rptRecommendList li{ width:458px; font-size:12px; border-bottom:1px dashed #888; height:40px; line-height:40px; float:left; margin:0 10px;_margin:0 5px; overflow:hidden; text-overflow:ellipsis; -o-text-overflow:ellipsis; white-space:nowrap;}
+.reportRecommend .rptRecommendList li span{ padding:0 6px;}
+
+.reportTips{ height:300px; font-family:"Microsoft YaHei";}
+.reportTips .rptTipLeft{ width:435px; height:216px; float:left; font-family:"Microsoft YaHei"; position:relative; }
+.reportTips .myrptRate,
+.reportTips .schoolrptRate{ color:#888; font-size:14px; width:134px; text-align:center; position:absolute; top:26px; padding-top:38px; }
+.reportTips .myrptRate p,
+.reportTips .schoolrptRate p{ margin-bottom:20px;}
+.reportTips .myrptRate span,
+.reportTips .schoolrptRate span{ font-size:26px; font-style:italic;}
+.reportTips .myrptRate{ left:30px;}
+.reportTips .schoolrptRate{ right:40px;}
+.reportTips .rptColor{ color:#e01e1e; font-size:16px; text-shadow:2px 1px 2px #c6c6c6; }
+.reportTips .rptRateResult{ text-align:center; position:absolute; width:100%; bottom:0; color:#2f86cf; font-weight:bold; font-size:16px; }
+.reportTips .rptTipRight{ width:548px; float:left; overflow:hidden;}
+.reportTips .rptTipInfo{ overflow:hidden; margin:22px 0;}
+.reportTips .rptTipInfo li{ height:26px; line-height:26px; font-size:14px; float:left;}
+.reportTips .rptTipInfo li span{ color:#167ac8;}
+.reportTips .rptTipInfo li.w340{ width:340px;}
+.reportTips .tutorPaper{ overflow:hidden; height:116px; _padding-top:22px;}
+.reportTips .tutorPaper .tutTitle{ width:84px; height:27px; line-height:27px; text-align:center;  color:#167ac8; margin-left:15px;}
+.reportTips .tutorPaper ul{ width:546px; height:83px; padding-top:3px; border:1px solid #e1e1e1; color:#333;}
+.reportTips .tutorPaper ul li{ line-height:26px; padding-left:15px; width:531px; overflow:hidden; text-overflow:ellipsis; -o-text-overflow:ellipsis; white-space:nowrap;}
+.reportTips .tutorPaper ul li span{ padding:6px; }
+
+.savePrint{ width:984px; margin:0 auto; height:20px; text-align:right; padding-top:12px; padding:12px 0 20px 0; border-top:1px solid #c9c9c9;}
+.savePrint a{ display:inline-block; *display:inline; *zoom:1; margin-left:20px;}
+.savePrint a.spSave{ padding-left:18px;}
+.savePrint a.spPrint{ padding-left:20px;}
+
+/*add 20150418*/
+.freeDoor{ position: absolute; width: 600px; height: 64px; top:9px; right: 7px;}
+/*20160304*/
+em.similar{word-break: break-all;}
+/*20160307*/
+.reference{color: #ebb00e;}
+p.uncheck{color: #666;}/*haochun*/
+em.similar{color:Red; font-style:normal;}

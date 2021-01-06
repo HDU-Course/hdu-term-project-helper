@@ -1,0 +1,747 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>全文标明引文报告</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="toTop" content="true">
+    <link href="css/index_2018051810.css" type="text/css" rel="stylesheet"/>
+    <script src="js/jquery1.42.min.js" type="text/javascript"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+    <script src="js/esl.js" type="text/javascript"></script>
+        <script src="js/toTop.js" type="text/javascript"></script>
+    <!--解决IE 6不支持png格式的代码-->
+    <!--[if IE 6]>-->
+    <script src="js/png.js" type="text/javascript"></script>
+    <script>
+        DD_belatedPNG.fix('.pngfix');
+
+        function ShowCharts1() {
+            var pieData = [];
+            pieData[0] = {
+                value: 1701,
+                name: '原创'
+            };
+            pieData[1] = {
+                value: 101,
+                name: '重复'
+            };
+            // 路径配置
+            require.config({
+                paths: {
+                    'echarts': 'https://staticxin.paperyy.com/static/js/echarts-map',
+                    'echarts/chart/pie': 'https://staticxin.paperyy.com/static/js/echarts-map'
+                }
+            });
+            require(
+                [
+                    'echarts',
+                    'echarts/chart/pie'
+                ],
+                function (ec) {
+                    var myChart = ec.init(document.getElementById('cnt_1_echart'));
+                    var option = {
+                        legend: {
+                            orient: 'vertical',
+                            x: 210,
+                            y: 10,
+                            data: ['原创', '重复']
+                        },
+                        tooltip: {
+                            trigger: 'item',
+                            //formatter: "{a} <br/>{b} : {c} ({d}%)",
+                            formatter: function (a) {
+                                return a[0] + " <br/>" + a[1] + " : " + a[2] + " (" + a[3] + "%)";
+                            }
+                        },
+                        calculable: false, //拖动
+                        grid: {x: 0, y: 0, x2: 0, y2: 10, borderWidth: 0},
+                        series: [
+                            {
+                                name: '字数',
+                                type: 'pie',
+                                radius: '45',
+                                startAngle: 130,
+                                center: ['39%', '45%'],
+                                data:pieData
+                            }
+                        ]
+                    };
+                    myChart.setOption(option);
+                }
+            );
+        }
+
+        //正则表达式，获取地址中的参数
+        var reg = new RegExp("(^|&)data=([^&]*)(&|$)", "i");
+
+        function getQueryString() {
+            var search = location.search;
+            var param = search.substr(1).match(reg);
+            if (param == null) return;
+            var encode = param[2];
+            var decode = decodeURI(encode);
+            var data = JSON.parse(decode);
+            var expires = data.Expires;
+            var ossaccesskeyid = data.OSSAccessKeyId;
+            var signatures = data.Signatures;
+            $(".repTabLink_0426 a").each(function () {
+                var key = $(this).attr("href");
+                var signature = signatures[key];
+                var url = key + "?Expires=" + expires + "&OSSAccessKeyId=" + ossaccesskeyid + "&Signature=" + signature + "&data=" + encode;
+                $(this).attr("href", url);
+            });
+            $("#navigation").show();
+        }
+        $(document).ready(function () {
+            getQueryString();
+            ShowCharts1();
+        });
+    </script>
+</head>
+<body>
+<!--底部弹框-->
+        <div class="new-guangg">
+            <img src="images/close_gray.png" class="new-close"/>
+            <img src="images/new-head.png" class="new-headbg"/>
+            <p class="new-head">第3代智能语义降重模型</p>
+            <p class="new-secHead">进一步优化修改后的语句通顺度、连贯性、上下文结构。较上一代提升30%</p>
+            <a class="new-a" href="javascript:void(0);" onClick="goJC('advert_reduce')">立即体验</a>
+            <p class="new-lastText">最高可降低75%比例</p>
+        </div>
+        <script>
+            $(function(){
+                var error_word=Math.floor(Math.random()*(100+1-0)+0);
+                $("#error_word").html(error_word + "个");
+                $(".nb-close").click(function(){
+                    $(".new-btbox").hide()
+                })
+                $(".new-close").click(function(){
+                    $(".new-guangg").hide()
+                })
+            })
+            function goJC(e){
+                var newWindow = window.open();
+                try{
+                    $.ajax({
+                        url:'https://www.paperyy.com/api/user-behavior/user-behavior-collect/3/12',
+                        async:true,
+                        data:{pageInfo:e}
+                    })
+                }
+                catch(err){
+
+                }
+                newWindow.location.href='https://www.paperyy.com/check-pay/reduce-pay-task/YY201912260217096060'
+            }
+        </script>
+<!--topbg-->
+<a name="top"></a>
+<div class="topbg">
+    <div class="top">
+        <div class="logo pngfix">
+                <img src="images/logo_4.png">（全文标明引文报告）
+        </div>
+    </div>
+</div>
+<!--topbg end-->
+<!--wrapper-->
+<div class="wrapper">
+    <!--wrapper_topbg-->
+    <div class="wrapper_topbg">
+        <!--xp 20150305 begin-->
+        <div class="type1"></div>
+        <!--xp 20150305 end-->
+        <!--wrapper_con-->
+        <div class="wrapper_con">
+            <div class="wrapper_conT"></div>
+            <div class="wrapper_con_content">
+                <!--TextInfo-->
+                <div class="TextInfo Mar">
+                    <div class="navbar">
+                        <ul class="fastBar">
+                        </ul>
+                    </div>
+                    <!--TextInfoCon-->
+                    <div class="TextInfoCon">
+                        <div class="TextTitle" style="width:129px;">文献基本信息</div>
+                        <!--TextInfoContent-->
+                        <div class="TextInfoContent">
+                            <div class="TextInfoContent_left">
+                                <ul>
+                                    <li><span class="lbt">检测文献：</span>小论文</li>
+                                    <li><span class="lbt">文献作者：</span>於文卓</li>
+                                    <li><span class="lbt">报告时间：</span>2019-12-26 02:17:14</li>
+                                    <li><span class="lbt">段落个数：</span>1</li>
+                                    <li><span class="lbt">报告编号：</span>YY201912260217096060</li>
+                                </ul>
+                            </div>
+                            <div class="division_line"></div>
+                            <div class="TextInfoContent_right">
+                                <ul>
+                                    <li class="title">检测范围：</li>
+                                    <li>中国期刊库</li>
+                                    <li>中国图书库</li>
+                                    <li>硕士论文库</li>
+                                    <li>博士论文库</li>
+                                    <li>会议论文库</li>
+                                    <li>报纸库</li>
+                                    <li>网友专利库</li>
+                                    <li>网友标准库</li>
+                                    <li>百科库</li>
+                                    <li>网页库</li>
+                                    <li>网友共享库</li>
+                                    <li>自建库</li>
+                                    <li>工作总结</li>
+                                    <li>思想汇报</li>
+                                    <li>项目申报书</li>
+                                </ul>
+                                    <div class="cnki_forecast">
+                                        <div class="title">
+                                            <img src="images/icon_cnki.jpg" alt="">
+                                            <span><strong>知网预测</strong>（总文字复制比）：</span>
+                                        </div>
+                                        <div class="progress_bar">
+                                            <div style="width: 7.0%;"></div>
+                                        </div>
+                                        <div class="rate">7.0%</div>
+                                    </div>
+                            </div>
+                            <div class="seal">
+                                <div id="SealArea">
+                                    <div id="SealBg">
+                                        <img width="125" height="125" src="data:image/png;base64,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"/>
+                                    </div>
+                                    <div id="SealPercent"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <!--TextInfoContent end-->
+                    </div>
+                    <!--TextInfoCon end-->
+                </div>
+                <!--TextInfo end-->
+                <div class="Recommend">
+                    <div class="TextTitle" style="width:112px;">推荐服务</div>
+                    <div class="ReportResult_T"></div>
+                    <div class="ReportResult_Con recommend_list">
+                        <a class="recommend_row" href="https://www.paperyy.com/check-pay/reduce-pay-task/YY201912260217096060" target="_blank">
+                            <div class="recommend_left">
+                                <img class="img1" src="images/recommend_icon1.png"/>
+                            </div>
+                            <p class="recommend_right">自动降重</p>
+                        </a>
+                         <a class="recommend_row" href="http://www.paperyy.com/online_check/prepare_check/968fdd76-d3b4-4fcf-a6a0-bf68cf97d67a" target="_blank">
+                            <div class="recommend_left">
+                                <img class="img2" src="images/recommend_icon2.png"/>
+                            </div>
+                            <p class="recommend_right">在线修改</p>
+                        </a>
+                         <a class="recommend_row" href="http://vip.cnkli.cn/channel_paperyy.html?v=cnki" target="_blank">
+                            <div class="recommend_left">
+                                <img class="img3" src="images/recommend_icon3.png"/>
+                            </div>
+                            <p class="recommend_right">正版知网</p>
+                        </a>
+                         <a class="recommend_row" href="https://www.paperyy.com/paper-correction/check?taskId=968fdd76-d3b4-4fcf-a6a0-bf68cf97d67a" target="_blank">
+                            <div class="recommend_left">
+                                <img class="img4" src="images/recommend_icon4.png"/>
+                            </div>
+                            <p class="recommend_right">论文纠错</p>
+                        </a>
+                         <a class="recommend_row" href="https://www.ixueshu.com/" target="_blank">
+                            <div class="recommend_left">
+                                <img class="img5" src="images/recommend_icon5.png"/>
+                            </div>
+                            <p class="recommend_right">找论文</p>
+                        </a>
+                         <a class="recommend_row" href="https://www.paperyy.com/paper_service.aspx" target="_blank">
+                            <div class="recommend_left">
+                                <img class="img6" src="images/recommend_icon6.png"/>
+                            </div>
+                            <p class="recommend_right">人工降重</p>
+                        </a>
+                    </div>
+                    <div class="ReportResult_Bot"></div>
+                </div>
+                <div>
+                    <!--<div class="banner_0508"><a href="https://www.paperyy.com/reduce_repetition.aspx?reportnum=YY201912260217096060" target="_blank"></a></div>-->
+                <a href="http://vip.cnkli.cn/channel_paperyy.html?v=cnki" target="_blank"><div class="banner_0509 banner_0511">
+            
+                <p class="estimate3">恭喜您！您离毕业只差一次 <i>知网定稿</i></p>
+                <p class="este">知网定稿，与学校结果一致，支持官网验证，假一赔十</p>
+            
+        </div></a>
+                </div>
+                <!--ReportResult-->
+                <div class="ReportResult Mar">
+                    <div class="TextTitle" style="width:129px;">检测报告结果</div>
+                    <div class="ReportResult_T"></div>
+                    <div class="ReportResult_Con">
+                        <!--ReportResult_Con1-->
+                        <div class="ReportResult_Con1">
+                            <dl>
+                                <dt>
+                                    <div class="navbar2">
+                                        <ul class="fastBar2">
+                                        </ul>
+                                    </div>
+                                    <span class="report">总文字复制比：5.6%</span>
+                                    <span class="remark"></span>
+                                </dt>
+                                <dd class="qu1">
+                                    <span class="report_green">去除引用文献复制比：</span>5.6%
+                                </dd>
+                                <dd class="qu2">
+                                    <span class="report_green">去除本人已发表文献复制比：</span>5.6%
+                                </dd>
+                                <dd class="qu3">
+                                    <span class="report_green">单篇最大文字复制比：</span>0.1%
+                                </dd>
+                            </dl>
+                            <!--detail-->
+                            <div class="detail">
+                                <div class="detail_L">
+                                    <ul>
+                                        <li>
+                                            <span class="text_blue">重复字数：</span>101
+                                        </li>
+                                        <li><span class="text_blue">总字数：</span>1,802（不含参考文献）</li>
+                                        <li><span class="text_blue">单篇最大重复字数：</span>24</li>
+                                        <li><span class="text_blue">总段落数：</span>1</li>
+                                        <li>
+                                            <span class="text_blue">前部重合字数：</span>0
+                                        </li>
+                                        <li>
+                                            <span class="text_blue">疑似段落最大重合字数：</span>101
+                                        </li>
+                                        <li>
+                                            <span class="text_blue">疑似段落数：</span>1
+                                        </li>
+                                        <li>
+                                            <span class="text_blue">后部重合字数：</span>96
+                                        </li>
+                                        <li>
+                                            <span class="text_blue">疑似段落最小重合字数：</span>0
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="detail_R">
+                                    <div id="cnt_1_echart" style="width:260px;height:132px;"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!--detail end-->
+                        </div>
+                        <!--ReportResult_Con1 end-->
+                        <!--ReportResult_Con2-->
+                        <!--ReportResult_Con2-->
+                    </div>
+                    <div class="ReportResult_Bot"></div>
+                </div>
+                <!--ReportResult end-->
+                <!--DetailReport-->
+                <div class="DetailReport Mar">
+                    <!--tab begin-->
+                    <div class="notice">
+                        <div class="repTabLink_0426">
+                            <div class="link_hd_0511"><a href="http://vip.cnkli.cn/channel_paperyy.html?v=cnko" target="_blank"><img src="images/guanggao_2.png"></a></div>
+                                <ul>
+                                            <li><a href="全文对照报告.html" target="_blank">全文对照报告</a></li>
+                                            <li><a href="简洁报告.html" target="_blank">简洁报告</a></li>
+                                            <li><a href="去除本人已发表文献报告.html" target="_blank">去除本人已发表文献报告</a></li>
+                                            <li class="curr">全文标明引文报告</li>
+                                </ul>
+                        </div>
+                        <div class="tab-bd">
+                            <div class="repTip_04261800">检测原文内容中<span class="red">红色字体</span>标记的为重复文字</div>
+                            <div class="tab-pal">
+                                <ul>
+                                    <!--xp 20150306 begin-->
+                                    <!--summary-->
+                                    <div class="summary">
+                                            <!--summary-->
+                                            <dl>
+                                                <dt>
+                                                    <span class="sumInfo">1.小论文_第1部分</span>
+                                                    <span class="sumTotal">总字数：1,802</span>
+                                                </dt>
+                                                <dd>文字复制比：5.6
+                                                    %（101）
+                                                </dd>
+                                            </dl>
+                                                <div class="simply_table">
+                                                    <table bordercolor="#fff" cellspacing="0" cellpadding="0"
+                                                           class="simp_table">
+                                                            <tr>
+                                                                <td class="org_number">
+                                                                    <span class="listNu">1</span>
+                                                                </td>
+                                                                <td class="org_content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="http://xueshu.baidu.com/s?wd=大学生论文联合库"
+                                                                               target="_blank">大学生论文联合库</a>
+                                                                        </li>
+                                                                        <li class="decoration">
+                                                                            gao -
+                                                                            《大学生论文联合库
+                                                                            》- 2015
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="org_line"></td>
+                                                                <td class="quote">
+                                                                    <ul class="quote_num">
+                                                                        <li class="shuzi">1.3%</li>
+                                                                        <li class="fenge_line"></li>
+                                                                        <li class="if_f">
+                                                                            是否引证：否
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="message_line">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="org_number">
+                                                                    <span class="listNu">2</span>
+                                                                </td>
+                                                                <td class="org_content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="http://xueshu.baidu.com/s?wd=大学生论文联合库"
+                                                                               target="_blank">大学生论文联合库</a>
+                                                                        </li>
+                                                                        <li class="decoration">
+                                                                            郭景瑞 -
+                                                                            《大学生论文联合库
+                                                                            》- 2016
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="org_line"></td>
+                                                                <td class="quote">
+                                                                    <ul class="quote_num">
+                                                                        <li class="shuzi">1.3%</li>
+                                                                        <li class="fenge_line"></li>
+                                                                        <li class="if_f">
+                                                                            是否引证：否
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="message_line">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="org_number">
+                                                                    <span class="listNu">3</span>
+                                                                </td>
+                                                                <td class="org_content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="http://xueshu.baidu.com/s?wd=大学生论文联合库"
+                                                                               target="_blank">大学生论文联合库</a>
+                                                                        </li>
+                                                                        <li class="decoration">
+                                                                            张勇 -
+                                                                            《大学生论文联合库
+                                                                            》- 2017
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="org_line"></td>
+                                                                <td class="quote">
+                                                                    <ul class="quote_num">
+                                                                        <li class="shuzi">1.2%</li>
+                                                                        <li class="fenge_line"></li>
+                                                                        <li class="if_f">
+                                                                            是否引证：否
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="message_line">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="org_number">
+                                                                    <span class="listNu">4</span>
+                                                                </td>
+                                                                <td class="org_content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="http://xueshu.baidu.com/s?wd=大学生论文联合库"
+                                                                               target="_blank">大学生论文联合库</a>
+                                                                        </li>
+                                                                        <li class="decoration">
+                                                                            张勇 -
+                                                                            《大学生论文联合库
+                                                                            》- 2017
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="org_line"></td>
+                                                                <td class="quote">
+                                                                    <ul class="quote_num">
+                                                                        <li class="shuzi">1.2%</li>
+                                                                        <li class="fenge_line"></li>
+                                                                        <li class="if_f">
+                                                                            是否引证：否
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="message_line">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                                
+                                                            <tr>
+                                                                <td class="org_number">
+                                                                    <span class="listNu">5</span>
+                                                                </td>
+                                                                <td class="org_content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="http://cache.baiducontent.com/c?m=9d78d513d9d437ac4f9b96697d61c0166d4381132ba6db020ba78449e3732a325016e4ac51210773d8d27d1716de3a4b9cf02235775d2feddd8eca0bcabae13532cd6271671cf1174f8242f3dc4652907dcf47abb81991b9f33394a4d4d9d85459dd537220c6afd5&p=8b2a970386cc43c346af856849&newp=8062c54ad49f02b746be9b7c4753d8224216ed6037d0c44324b9d71fd325001c1b69e7bf21241700d6c17a6707a54c5feafa3476301766dada9fca458ae7c4746c9039&user=baidu&fm=sc&query=site%3Adocin%2Ecom+%D1%D0%BE%BF%C9%FA%CA%B5%D1%E9%CA%D2&qid=a539bfef0000206b&p1=31"
+                                                                               target="_blank">研究生日常管理规定(草稿)</a>
+                                                                        </li>
+                                                                        <li class="decoration">
+                                                                             -
+                                                                            《网页
+                                                                            》- 
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="org_line"></td>
+                                                                <td class="quote">
+                                                                    <ul class="quote_num">
+                                                                        <li class="shuzi">1.2%</li>
+                                                                        <li class="fenge_line"></li>
+                                                                        <li class="if_f">
+                                                                            是否引证：否
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="message_line">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="org_number">
+                                                                    <span class="listNu">6</span>
+                                                                </td>
+                                                                <td class="org_content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="http://xueshu.baidu.com/s?wd=大学生论文联合库"
+                                                                               target="_blank">大学生论文联合库</a>
+                                                                        </li>
+                                                                        <li class="decoration">
+                                                                            - -
+                                                                            《大学生论文联合库
+                                                                            》- 2017
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="org_line"></td>
+                                                                <td class="quote">
+                                                                    <ul class="quote_num">
+                                                                        <li class="shuzi">1.2%</li>
+                                                                        <li class="fenge_line"></li>
+                                                                        <li class="if_f">
+                                                                            是否引证：否
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="message_line">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="org_number">
+                                                                    <span class="listNu">7</span>
+                                                                </td>
+                                                                <td class="org_content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="http://xueshu.baidu.com/s?wd=大学生论文联合库"
+                                                                               target="_blank">大学生论文联合库</a>
+                                                                        </li>
+                                                                        <li class="decoration">
+                                                                            王震 -
+                                                                            《大学生论文联合库
+                                                                            》- 2016
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="org_line"></td>
+                                                                <td class="quote">
+                                                                    <ul class="quote_num">
+                                                                        <li class="shuzi">1.2%</li>
+                                                                        <li class="fenge_line"></li>
+                                                                        <li class="if_f">
+                                                                            是否引证：否
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="message_line">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="org_number">
+                                                                    <span class="listNu">8</span>
+                                                                </td>
+                                                                <td class="org_content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="http://xueshu.baidu.com/s?wd=大学生论文联合库"
+                                                                               target="_blank">大学生论文联合库</a>
+                                                                        </li>
+                                                                        <li class="decoration">
+                                                                             -
+                                                                            《大学生论文联合库
+                                                                            》- 2015
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="org_line"></td>
+                                                                <td class="quote">
+                                                                    <ul class="quote_num">
+                                                                        <li class="shuzi">1.1%</li>
+                                                                        <li class="fenge_line"></li>
+                                                                        <li class="if_f">
+                                                                            是否引证：否
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="message_line">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="org_number">
+                                                                    <span class="listNu">9</span>
+                                                                </td>
+                                                                <td class="org_content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="http://xueshu.baidu.com/s?wd=大学生论文联合库"
+                                                                               target="_blank">大学生论文联合库</a>
+                                                                        </li>
+                                                                        <li class="decoration">
+                                                                            尤盛 -
+                                                                            《大学生论文联合库
+                                                                            》- 2017
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="org_line"></td>
+                                                                <td class="quote">
+                                                                    <ul class="quote_num">
+                                                                        <li class="shuzi">1.1%</li>
+                                                                        <li class="fenge_line"></li>
+                                                                        <li class="if_f">
+                                                                            是否引证：否
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="message_line">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                                
+                                                            <tr>
+                                                                <td class="org_number">
+                                                                    <span class="listNu">10</span>
+                                                                </td>
+                                                                <td class="org_content">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="https://www.ruiwen.com/lunwen/2002717.html"
+                                                                               target="_blank">种子检验信息管理系统软件开发论文</a>
+                                                                        </li>
+                                                                        <li class="decoration">
+                                                                             -
+                                                                            《网页
+                                                                            》- 
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                                <td class="org_line"></td>
+                                                                <td class="quote">
+                                                                    <ul class="quote_num">
+                                                                        <li class="shuzi">1.1%</li>
+                                                                        <li class="fenge_line"></li>
+                                                                        <li class="if_f">
+                                                                            是否引证：否
+                                                                        </li>
+                                                                    </ul>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="message_line">
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                        <!--内容1 end-->
+                                                    </table>
+                                                </div>
+                                            <!--detail_table end-->
+                                            <div class="yuanwen_title">原文内容</div>
+                                            <div class="yuanwen">
+                                                <p>    基于权重加志愿筛选的新型选课系统</p><p>    於文卓李正瑜牟宇李萌玻僧德文</p><p>    摘要:网上选课系统的接受程度日</p><p>    益剧增,但传统的网上选课系统存在</p><p>    各种各样的问题。本文首先分析了传</p><p>    统选课系统的弊端,提出了一种基于</p><p>    权重加志愿筛选算法的新型选课系统。</p><p>    并对算法做了详细描述,对系统各模</p><p>    块功能进行了分析。提供了一个性能</p><p>    先进、界面美观、安全性及公平性更高</p><p>    的学生选课系统。</p><p>    1.研究背景:</p><p>    随着互联网的普及,各大高校普遍</p><p>    采用了网上选课的方式,为广大师生</p><p>    带来了非常大的方便。然而传统的网</p><p>    上选课系统多由早期外包公司负责,</p><p>    集成在一个大型教务系统当中。多年</p><p>    的无维护无更新,传统网上选课系统</p><p>    的存在的弊病逐渐显露出来。最常见</p><p>    的问题有对高并发支持程度差,导致</p><p>    选课期间出现访问网页无响应、提交</p><p>    选课信息延迟高、验证码无法刷新等</p><p>    问题。界面原始、与时代不符严重影响</p><p>    了选课的体验。</p><p>    此外选课算法多为先来先服务算</p><p>    法(FCFS),也是造成选课变为&quot;抢课&quot;</p><p>    一说的重要原因。这种算法下的选课</p><p>    受到运营商、浏览器、服务器等众多外</p><p>    部因素的限制,使得纯粹的选课变成</p><p>    了一项富有技巧性的抢课活动。在这</p><p>    种不公平的环境下,滋生了许多不良</p><p>    的现象,如制作抢课插件、高年级屯课、</p><p>    高价课程买卖等。如何提供一种更加</p><p>    公平的选课算法成了一个迫在眉睫的</p><p>    问题。</p><p>    因此师生对一个更加人性化的选</p><p>    课系统的开发有了更急迫的需求,我</p><p>    们决定开发一套性能先进、界面美观、</p><p>    安全性及公平性更高的学生选课系统。</p><p>    2.新型选课系统总体设计</p><p>    2.1系统优势</p><p>    1)因为开发环境和条件得到充分</p><p>    <em class='similar'>满足,开发过程中减少了物力财力的</em></p><p>    投入;</p><p>    2)本系统开发是使用 Go语言,其</p><p>    最大的优势就是对有大规模高并发的</p><p>    后端服务器提供强大的支持。改进后</p><p>    的系统查询速度快;高并发能力强,选</p><p>    课流畅公平;</p><p>    3)独有的权重值+分志愿算法保</p><p>    证了选课的公平竞争;</p><p>    4)管理员权限管理能力更全面,</p><p>    保证了系统的安全性;</p><p>    5)选课系统从庞大的教务系统中</p><p>    脱离,模块化的结构更加容易维护和</p><p>    管理。</p><p>    2.2系统功能模块功能</p><p>    学生:通过学号、密码登录选课系</p><p>    <em class='similar'>统,查看个人信息以及课程相关信息、</em></p><p>    查询各门课程学分、查看已选课程、课</p><p>    程选择志愿提交等。</p><p>    <em class='similar'>教师:使用教工号和密码登录,管</em></p><p>    <em class='similar'>理名下课程、对课程信息做修改、成绩</em></p><p>    录入、查看选课学生情况等。</p><p>    <em class='similar'>管理员:管理系统、管理学生及教</em></p><p>    师的各类信息、修改异常数据等。维护</p><p>    系统安全。管理员赋予各类账户相应</p><p>    权限,只能查看、修改到权限内的相关</p><p>    信息同</p><p>    3.权重加志愿筛选算法</p><p>    引入权重值的分志愿筛选算法,具</p><p>    体算法说明如下:</p><p>    新生入学的时候,教务处为每一位</p><p>    学生设置一个权重的初始值 R,初始值</p><p>    的大小由教务处自由选择决定。根据</p><p>    <em class='similar'>学生本学期的综合表现,学期末变更</em></p><p>    学生的权重值,变更的规则由教务处</p><p>    自行决定,比如根据学生本学期的竞</p><p>    赛、社团活动、班级贡献等,量化为一</p><p>    定的权重值,每一项活动的权重值记</p><p>    做𝛽𝑖,记录一个学期中的 n个活动,得</p><p>    到最终权重为:</p><p>    𝛽=𝛽+&sum;𝛽𝑖</p><p>    𝑛</p><p>    𝑖=1</p><p>    在预选课阶段,比如在正式选课开</p><p>    始前30分钟,选课学生根据自己的兴</p><p>    趣填写若干个志愿并提交。正式选课</p><p>    开始后,系统会根据算法自动处理,筛</p><p>    选出最终上课学生。在算法处理中,针</p><p>    对一门课会遇到如下几种情况:</p><p>    1)某一门课开课人数为 M,第一志</p><p>    愿人数为 N,N&lt;=M;</p><p>    将 N 人作为该课程的正式上课学</p><p>    生,若此时依然有空余,则选择第二志</p><p>    愿的学生,重复此算法。</p><p>    2)某一门课开课人数为 M,第一志</p><p>    愿人数为 N,N&gt;M。</p><p>    对这 N个人根据权重大小排序,大</p><p>    于阈值 P 的学生人数为 N1,这是又会</p><p>    有两种情况:</p><p>    2.1)若 N1&lt;=M,则将这 N1个人作</p><p>    为正式上课学生。若此时依然有空余,</p><p>    对剩下的 N-N1个人使用平均分布概率</p><p>    算法;</p><p>    2.2)若 N1&gt;M,则对着 N1个人使用</p><p>    平均概率分布算法,筛选出 M 个人作</p><p>    为正式上课学生。</p><p>    基于这样的算法,教务处在设置选</p><p>    课时间等规则上可以做出适当改变。</p><p>    比如正式选课提前半小时开放志愿填</p><p>    写通道,提前五分钟关闭通道。五分钟</p><p>    后后台自动计算得到志愿结果,这样</p><p>    就很好的解决了并发问题。可以设定</p><p>    规则,不是所有的课程都是志愿填选,</p><p>    让志愿填选多用于公选课,也可以设</p><p>    置退选公选课降低权重,从而避免屯</p><p>    课等行为的发生。</p><p>    4.结语</p><p>    新型选课系统可以提高学生网上</p><p>    选课的体验。使用新型网上选课系统</p><p>    后,将提升网上选课的公平性,增加学</p><p>    生选课效率,最终减少教务处的工作</p><p>    量。另一方面提高了学校的口碑,促进</p><p>    学校的良性发展。</p><p>    参考资料</p><p>    《杭州电子科技大学本科学分制学籍</p><p>    管理条例》</p><p>    《杭州电子科技大学学分制选课办法》</p>
+                                            </div>
+                                        <!--summary end-->
+                                        <!--xp 20150305 end-->
+                                    </div>
+                                    <!--summary end-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--tab end-->
+                </div>
+                <!--DetailReport end-->
+            </div>
+            <div class="wrapper_con_Bottom"></div>
+        </div>
+        <!--wrapper_con end-->
+    </div>
+    <!--wrapper_topbg end-->
+    <div class="copyright">版权所有 <a href="https://www.paperyy.com" target="_blank">www.paperyy.com</a></div>
+</div>
+<!--wrapper end-->
+</body>
+</html>
